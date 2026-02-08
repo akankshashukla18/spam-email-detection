@@ -1,8 +1,11 @@
-#SVM
+#SVM 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+import streamlit as st
+st.title("app is running")
+st.write("if you can see this, Streamlit is working.")
 
 emails= [
 "Congratulations! You’ve won a free iPhone",
@@ -54,4 +57,5 @@ prediction=svm_model.predict(new_email_vectorized)
 if prediction[0]==1:
   print("Result: The email is spam.")
 else:
+
   print("Result: The email is not spam.")
